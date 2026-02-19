@@ -1,0 +1,15 @@
+{
+    "name": "uofu-symposium",
+    "version": "1.0.0",
+    "description": "AI in Business Presentation for U of U Executive Symposium",
+    "scripts": {
+        "start": "npx serve .",
+        "build": "echo 'No build step required for static site' && exit 0"
+    },
+    "keywords": [],
+    "author": "Aakash Tuli",
+    "license": "ISC",
+    "dependencies": {
+        "serve": "^14.2.1"
+    }
+}
