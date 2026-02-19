@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI in Business: Impact and Opportunity – U of U Executive Symposium 2026">
+    <title>AI in Business | Aakash Tuli | U of U Executive Symposium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">
+        <span id="currentSlide">1</span> <span class="counter-sep">/</span> <span id="totalSlides">7</span>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="nav-arrow nav-prev" id="prevBtn" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" />
+        </svg>
+    </button>
+    <button class="nav-arrow nav-next" id="nextBtn" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6" />
+        </svg>
+    </button>
+
+    <!-- Keyboard hint -->
+    <div class="keyboard-hint" id="keyboardHint">
+        <span>← →</span> Navigate &nbsp;|&nbsp; <span>ESC</span> Overview
+    </div>
+
+    <!-- Slides Container -->
+    <div class="slides-container" id="slidesContainer">
+
+        <!-- Slide 1: Title -->
+        <section class="slide active" id="slide-1">
+            <div class="slide-content title-slide">
+                <div class="bg-grid"></div>
+                <div class="bg-radial"></div>
+
+                <!-- Floating architecture lines -->
+                <div class="arch-lines">
+                    <div class="arch-line al-1"></div>
+                    <div class="arch-line al-2"></div>
+                    <div class="arch-line al-3"></div>
+                </div>
+
+                <div class="title-inner">
+                    <div class="event-badge">
+                        <span class="badge-dot"></span>
+                        U of U Executive Symposium · 2026
+                    </div>
+
+                    <div class="title-headline">
+                        <div class="title-sub-small">From</div>
+                        <h1 class="main-title">
+                            <span class="gradient-text">"AI Curiosity"</span>
+                        </h1>
+                        <div class="title-to">to</div>
+                        <h1 class="main-title main-title-alt">
+                            <span class="outline-text">"Operational Alpha"</span>
+                        </h1>
+                    </div>
+
+                    <p class="title-tagline">Moving executives from theory to organizational readiness.</p>
+
+                    <div class="presenter-row">
+                        <div class="presenter-avatar">AT</div>
+                        <div class="presenter-details">
+                            <span class="presenter-name">Aakash Tuli</span>
+                            <span class="presenter-role">Director of Architecture</span>
+                        </div>
+                        <div class="presenter-divider"></div>
+                        <div class="session-info">AI in Business: Impact &amp; Opportunity</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: The Strategic Pivot -->
+        <section class="slide" id="slide-2">
+            <div class="slide-content">
+                <div class="bg-grid"></div>
+                <div class="section-tag-pill">01 · The Strategic Pivot</div>
+                <h2 class="slide-title">The <span class="gradient-text">Scale Gap</span> &amp; The Three Pillars</h2>
+
+                <!-- Bridge Visual -->
+                <div class="bridge-visual">
+                    <div class="bridge-side bridge-left">
+                        <div class="bridge-label-top">WHERE YOU ARE</div>
+                        <div class="bridge-content scaffolding">
+                            <div class="scaffold-beam sb-1"></div>
+                            <div class="scaffold-beam sb-2"></div>
+                            <div class="scaffold-beam sb-3"></div>
+                            <div class="scaffold-beam sb-4"></div>
+                            <div class="scaffold-cross sc-1"></div>
+                            <div class="scaffold-cross sc-2"></div>
+                            <div class="scaffold-label">Pilots &amp; Experiments</div>
+                        </div>
+                    </div>
+                    <div class="bridge-gap">
+                        <div class="bridge-road"></div>
+                        <div class="bridge-stat">
+                            <div class="stat-number-big">80%</div>
+                            <div class="stat-label-small">of AI pilots never reach production</div>
+                        </div>
+                        <div class="gap-arrow">→</div>
+                    </div>
+                    <div class="bridge-side bridge-right">
+                        <div class="bridge-label-top">WHERE YOU NEED TO BE</div>
+                        <div class="bridge-content digital-highway">
+                            <div class="highway-lane hl-1"></div>
+                            <div class="highway-lane hl-2"></div>
+                            <div class="highway-lane hl-3"></div>
+                            <div class="highway-particle hp-1"></div>
+                            <div class="highway-particle hp-2"></div>
+                            <div class="highway-particle hp-3"></div>
+                            <div class="scaffold-label gold">Enterprise Engine &amp; AI ROI</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Three Pillars -->
+                <div class="pillars-row">
+                    <div class="pillar-card">
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        </div>
+                        <div class="pillar-label">Infrastructure</div>
+                        <div class="pillar-sub">The Engine</div>
+                    </div>
+                    <div class="pillar-connector">+</div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+                        </div>
+                        <div class="pillar-label">Talent</div>
+                        <div class="pillar-sub">The Crew</div>
+                    </div>
+                    <div class="pillar-connector">+</div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div class="pillar-label">Culture</div>
+                        <div class="pillar-sub">The Compass</div>
+                    </div>
+                    <div class="pillar-connector">=</div>
+                    <div class="pillar-card pillar-result">
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                        </div>
+                        <div class="pillar-label">AI Capabilities</div>
+                        <div class="pillar-sub">Not just "AI Tools"</div>
+                    </div>
+                </div>
+
+                <div class="interaction-block">
+                    <span class="interaction-icon">🎤</span>
+                    <span class="interaction-text"><strong>Poll:</strong> Can you name one AI initiative in your org that is a permanent part of your P&amp;L today — not a pilot?</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: The 10-20-70 Rule -->
+        <section class="slide" id="slide-3">
+            <div class="slide-content">
+                <div class="bg-grid"></div>
+                <div class="section-tag-pill">02 · Capital Allocation</div>
+                <h2 class="slide-title">The <span class="gradient-text">10·20·70 Rule</span> of AI Success</h2>
+                <p class="slide-intro">Where you invest is where you succeed. The model is a commodity — the transformation is human.</p>
+
+                <!-- Fuel Tank Visual -->
+                <div class="fuel-tank-container">
+                    <div class="fuel-tank">
+                        <div class="tank-labels-left">
+                            <div class="tank-label tl-algorithms">
+                                <span class="tl-pct">10%</span>
+                                <span class="tl-name">Algorithms</span>
+                            </div>
+                            <div class="tank-label tl-tech">
+                                <span class="tl-pct">20%</span>
+                                <span class="tl-name">Technology</span>
+                            </div>
+                            <div class="tank-label tl-people">
+                                <span class="tl-pct">70%</span>
+                                <span class="tl-name">People &amp; Process</span>
+                            </div>
+                        </div>
+                        <div class="tank-body">
+                            <div class="tank-fill">
+                                <div class="tank-segment ts-algorithms">
+                                    <span>10% · Algorithms</span>
+                                    <div class="ts-detail">The model is a commodity. Lease it, rent it — don't over-capitalize.</div>
+                                </div>
+                                <div class="tank-segment ts-tech">
+                                    <span>20% · Technology</span>
+                                    <div class="ts-detail">Data engineering, infrastructure &amp; architectural foundations.</div>
+                                </div>
+                                <div class="tank-segment ts-people">
+                                    <span>70% · People &amp; Process</span>
+                                    <div class="ts-detail">Change management, workflow redesign &amp; the human "last mile."</div>
+                                </div>
+                            </div>
+                            <div class="tank-gloss"></div>
+                        </div>
+                        <div class="tank-base"></div>
+                    </div>
+                </div>
+
+                <div class="interaction-block interaction-warning">
+                    <span class="interaction-icon">⚠️</span>
+                    <span class="interaction-text"><strong>Challenge:</strong> If your budget is 80% technology and 20% people — you are architecting for a pilot, not a transformation. Where is your weight currently distributed?</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Readiness Self-Diagnostic -->
+        <section class="slide" id="slide-4">
+            <div class="slide-content">
+                <div class="bg-grid"></div>
+                <div class="section-tag-pill">03 · Readiness Equation</div>
+                <h2 class="slide-title">The <span class="gradient-text">Readiness</span> Equation</h2>
+
+                <!-- Formula Display -->
+                <div class="formula-container">
+                    <div class="formula-display">
+                        <div class="formula-lhs">Readiness</div>
+                        <div class="formula-eq">=</div>
+                        <div class="formula-fraction">
+                            <div class="formula-numerator">(Data × Strategy)<sup>Culture</sup></div>
+                            <div class="formula-bar"></div>
+                            <div class="formula-denominator">Risk</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Variables explained -->
+                <div class="variables-grid">
+                    <div class="var-card" data-var="data">
+                        <div class="var-symbol">D</div>
+                        <div class="var-content">
+                            <div class="var-name">Data</div>
+                            <div class="var-role">The Fuel</div>
+                            <div class="var-desc">No fuel, no movement. Clean, connected data is the prerequisite.</div>
+                        </div>
+                    </div>
+                    <div class="var-card" data-var="strategy">
+                        <div class="var-symbol">S</div>
+                        <div class="var-content">
+                            <div class="var-name">Strategy</div>
+                            <div class="var-role">The Direction</div>
+                            <div class="var-desc">A fragmented strategy multiplies effort without compounding results.</div>
+                        </div>
+                    </div>
+                    <div class="var-card var-card-highlight" data-var="culture">
+                        <div class="var-symbol">C</div>
+                        <div class="var-content">
+                            <div class="var-name">Culture</div>
+                            <div class="var-role">The Exponential Multiplier</div>
+                            <div class="var-desc">The exponent that can 10× your results — or collapse them to zero.</div>
+                        </div>
+                        <div class="var-glow"></div>
+                    </div>
+                    <div class="var-card var-card-risk" data-var="risk">
+                        <div class="var-symbol">R</div>
+                        <div class="var-content">
+                            <div class="var-name">Risk</div>
+                            <div class="var-role">The Friction / Denominator</div>
+                            <div class="var-desc">Unmanaged risk doesn't stop you — it divides every gain you make.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interaction-block">
+                    <span class="interaction-icon">💬</span>
+                    <span class="interaction-text"><strong>Group Discussion:</strong> Which variable is your current "Denominator"? Data? Strategy? Or a culture that views AI as a threat?</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Infrastructure -->
+        <section class="slide" id="slide-5">
+            <div class="slide-content">
+                <div class="bg-grid"></div>
+                <div class="section-tag-pill">04 · Infrastructure</div>
+                <h2 class="slide-title">From Legacy <span class="gradient-text">"Data Puddles"</span> to an <span class="outline-text-sm">Intelligence Fabric</span></h2>
+
+                <!-- Then vs Now Diagram -->
+                <div class="then-now-container">
+                    <div class="then-side">
+                        <div class="tn-label then-label">THEN: Legacy Silos</div>
+                        <div class="tn-diagram silo-diagram">
+                            <div class="silo-group">
+                                <div class="silo s-1"><span>CRM</span></div>
+                                <div class="silo-puddle"></div>
+                            </div>
+                            <div class="silo-group">
+                                <div class="silo s-2"><span>ERP</span></div>
+                                <div class="silo-puddle"></div>
+                            </div>
+                            <div class="silo-group">
+                                <div class="silo s-3"><span>DW</span></div>
+                                <div class="silo-puddle"></div>
+                            </div>
+                            <div class="silo-group">
+                                <div class="silo s-4"><span>BI</span></div>
+                                <div class="silo-puddle"></div>
+                            </div>
+                            <div class="silo-no-connect">No connections · Batch updates · High latency</div>
+                        </div>
+                    </div>
+
+                    <div class="tn-arrow-wrap">
+                        <div class="tn-vs">VS</div>
+                        <div class="tn-right-arrow">→</div>
+                    </div>
+
+                    <div class="now-side">
+                        <div class="tn-label now-label">NOW: AI Fabric</div>
+                        <div class="tn-diagram fabric-diagram">
+                            <div class="fabric-layer fl-cloud">
+                                <span class="fl-icon">☁️</span>
+                                <span>Cloud Elasticity</span>
+                            </div>
+                            <div class="fabric-arrows">
+                                <div class="fa-arrow"></div>
+                                <div class="fa-arrow"></div>
+                                <div class="fa-arrow"></div>
+                            </div>
+                            <div class="fabric-layer fl-streams">
+                                <span class="fl-icon">⚡</span>
+                                <span>Real-Time Data Streams</span>
+                            </div>
+                            <div class="fabric-arrows">
+                                <div class="fa-arrow"></div>
+                                <div class="fa-arrow"></div>
+                                <div class="fa-arrow"></div>
+                            </div>
+                            <div class="fabric-layer fl-orch">
+                                <span class="fl-icon">🔀</span>
+                                <span>Model-Agnostic Orchestration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Points -->
+                <div class="infra-points">
+                    <div class="ip-card">
+                        <div class="ip-icon">📈</div>
+                        <div class="ip-text"><strong>Elasticity as Strategy</strong> — Compute on Demand for non-linear AI workloads</div>
+                    </div>
+                    <div class="ip-card">
+                        <div class="ip-icon">🔄</div>
+                        <div class="ip-text"><strong>Context in Motion</strong> — RAG-ready streaming data, not "Data at Rest"</div>
+                    </div>
+                    <div class="ip-card">
+                        <div class="ip-icon">🔌</div>
+                        <div class="ip-text"><strong>Swap Any LLM</strong> — Model-agnostic core, no re-engineering required</div>
+                    </div>
+                </div>
+
+                <div class="interaction-block interaction-challenge">
+                    <span class="interaction-icon">🏗️</span>
+                    <span class="interaction-text"><strong>Challenge:</strong> If a competitor disrupted your market today, would your stack allow a 48-hour response — or are you in a "Submit a Ticket" environment?</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Human Engine -->
+        <section class="slide" id="slide-6">
+            <div class="slide-content">
+                <div class="bg-grid"></div>
+                <div class="section-tag-pill">05 · The Human Engine</div>
+                <h2 class="slide-title">From <span class="gradient-text">"Model Users"</span> to <span class="outline-text-sm">"Context Masters"</span></h2>
+
+                <div class="talent-layout">
+                    <!-- Venn Diagram -->
+                    <div class="venn-container">
+                        <div class="venn-diagram">
+                            <div class="venn-circle vc-new">
+                                <div class="vc-inner">
+                                    <div class="vc-label">New Roles</div>
+                                    <ul class="vc-list">
+                                        <li>Context Engineers</li>
+                                        <li>AI Product Mgrs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="venn-circle vc-reskill">
+                                <div class="vc-inner">
+                                    <div class="vc-label">Reskilled Experts</div>
+                                    <ul class="vc-list">
+                                        <li>Domain SMEs</li>
+                                        <li>AI-Augmented</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="venn-circle vc-lead">
+                                <div class="vc-inner">
+                                    <div class="vc-label">AI-Literate Leaders</div>
+                                    <ul class="vc-list">
+                                        <li>Active Steering</li>
+                                        <li>Vet ROI Claims</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="venn-center">
+                                <div class="vc-center-text">Capability<br>Gap<br>Closed</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role Deep Dives -->
+                    <div class="roles-detail">
+                        <div class="role-card rc-context">
+                            <div class="role-title">
+                                <span class="role-icon">🏛️</span>
+                                Context Engineers
+                            </div>
+                            <p>Architects of "Truth" — curating the knowledge that grounds AI in company-specific reality. The guardrails against hallucination at scale.</p>
+                        </div>
+                        <div class="role-card rc-aipm">
+                            <div class="role-title">
+                                <span class="role-icon">💼</span>
+                                AI Product Managers
+                            </div>
+                            <p>The ROI owners — bridging technical feasibility with business value. If there's no AI PM, there's no accountability loop.</p>
+                        </div>
+                        <div class="role-card rc-lead">
+                            <div class="role-title">
+                                <span class="role-icon">🎯</span>
+                                Executive AI Literacy
+                            </div>
+                            <p>Augmentation &gt; Replacement. Leaders who can vet a vendor's AI pitch without relying on the vendor's own slides.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interaction-block interaction-scale">
+                    <span class="interaction-icon">📊</span>
+                    <span class="interaction-text"><strong>Scale 1–10:</strong> How confident is this room in vetting an AI proposal's ROI without relying entirely on a vendor's pitch?</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Org Design / Closing -->
+        <section class="slide" id="slide-7">
+            <div class="slide-content">
+                <div class="bg-grid"></div>
+                <div class="section-tag-pill">06 · Organizational Design</div>
+                <h2 class="slide-title">Structuring for <span class="gradient-text">Perpetual Innovation</span></h2>
+
+                <!-- Hub and Spoke -->
+                <div class="hub-spoke-container">
+                    <div class="hub-diagram">
+                        <!-- Spokes -->
+                        <div class="spoke-wrapper">
+                            <div class="spoke-unit su-top">
+                                <div class="spoke-line sl-top"></div>
+                                <div class="spoke-node">
+                                    <span class="sn-icon">👥</span>
+                                    <span>HR</span>
+                                </div>
+                            </div>
+                            <div class="spoke-unit su-right">
+                                <div class="spoke-line sl-right"></div>
+                                <div class="spoke-node">
+                                    <span class="sn-icon">💰</span>
+                                    <span>Finance</span>
+                                </div>
+                            </div>
+                            <div class="spoke-unit su-bottom">
+                                <div class="spoke-line sl-bottom"></div>
+                                <div class="spoke-node">
+                                    <span class="sn-icon">⚙️</span>
+                                    <span>Ops</span>
+                                </div>
+                            </div>
+                            <div class="spoke-unit su-left">
+                                <div class="spoke-line sl-left"></div>
+                                <div class="spoke-node">
+                                    <span class="sn-icon">📦</span>
+                                    <span>Product</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hub -->
+                        <div class="hub-center">
+                            <div class="hub-glow"></div>
+                            <div class="hub-inner">
+                                <div class="hub-title">AI CoE</div>
+                                <div class="hub-subtitle">Center of Excellence</div>
+                            </div>
+                            <!-- Orbit ring -->
+                            <div class="hub-ring"></div>
+                        </div>
+
+                        <!-- Feedback loop indicator -->
+                        <div class="feedback-loop-badge">
+                            <span>↻</span> Feedback Loop
+                        </div>
+                    </div>
+
+                    <div class="hub-details">
+                        <div class="hd-card hd-hub">
+                            <div class="hd-title">
+                                <span class="hd-dot hub-dot"></span>
+                                The Hub — AI CoE
+                            </div>
+                            <ul class="hd-list">
+                                <li>Infrastructure &amp; vendor standards</li>
+                                <li>Cross-functional security &amp; governance</li>
+                                <li>Shared tooling &amp; reusable capabilities</li>
+                            </ul>
+                        </div>
+                        <div class="hd-card hd-spokes">
+                            <div class="hd-title">
+                                <span class="hd-dot spoke-dot"></span>
+                                The Spokes — Business Units
+                            </div>
+                            <ul class="hd-list">
+                                <li>Own the specific use cases</li>
+                                <li>Final P&amp;L impact &amp; accountability</li>
+                                <li>Push wins back into the Hub</li>
+                            </ul>
+                        </div>
+                        <div class="hd-card hd-loop">
+                            <div class="hd-title">
+                                <span class="hd-dot loop-dot"></span>
+                                The Feedback Loop
+                            </div>
+                            <ul class="hd-list">
+                                <li>A "win" in HR becomes a template for Ops</li>
+                                <li>Every use case makes the next one cheaper</li>
+                                <li>Compounding organizational intelligence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="closing-handoff">
+                    <div class="ch-line"></div>
+                    <p>We've built the engine and hired the crew. Our next speaker will discuss the <strong>Guardrails (Governance)</strong> that keep the ship on course.</p>
+                    <div class="ch-line"></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
